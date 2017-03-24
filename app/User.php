@@ -4,9 +4,11 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
-{
+{   
+    use EntrustUserTrait; //hacemos uso del trait en la clase User para hacer uso de sus métodos
     use Notifiable;
 
     /**
