@@ -22,7 +22,7 @@
         ]) !!};
     </script>
 
-    <script src="./{{ mix('/sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
 
     <script>
         //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs
