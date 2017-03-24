@@ -21,8 +21,13 @@ class Doctor extends Model
 	public static $rules = [
 	    "name" => "required",
 		"last_name" => "required",
-		"phone" => "requires",
+		"phone" => "required",
 		"cedula" => "required"
 	];
+
+	public function user()
+	{
+		return $this->belongsTo('App\User');
+	}
 
 }
