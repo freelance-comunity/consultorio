@@ -60,8 +60,30 @@ class DoctorController extends AppBaseController
 	 * @return Response
 	 */
 	public function store(CreateDoctorRequest $request)
-	{
-        $input = $request->all();
+	{	
+		$input = $request->all();
+		/*Create User*/
+		$name = $request->input('name');
+		$email = $request->input('email');
+        // generar un password
+		$random_password = str_random(8);
+		$datos['name'] = $name;
+		$datos['email'] = $email;
+		$datos['password'] = Hash::make($random_password);
+		/*Mail*/
+		$data['name'] = $name;
+		$data['pass'] = $random_password;
+		$data['email'] = $email;
+		/*Crear usuario de alumno*/
+		$usuario = User::create($datos);
+		$id = $usuario->id;
+		$user = User::find($id);
+		$student = Role::find(1);
+		$user->attachRole($student);
+		$input['user_id'] = $id;
+		$input['password'] = $random_password;
+		/**/
+        
 
 		$doctor = Doctor::create($input);
 
