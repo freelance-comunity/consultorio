@@ -30,4 +30,11 @@ Route::group(['middleware' => 'auth'], function () {
 		'as' => 'patients.delete',
 		'uses' => 'PatientsController@destroy',
 		]);
+
+	Route::resource('consulations', 'ConsulationsController');
+
+	Route::get('consulations/{id}/delete', [
+		'as' => 'consulations.delete',
+		'uses' => 'PatientsController@destroy',
+		]);
 });
