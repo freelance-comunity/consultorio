@@ -12,12 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('redirect', function(){
-	alert()->success('Probando', 'Sweet Alert trabajando');
-	return redirect('/');
+    return redirect('login');
 });
 
 Route::group(['middleware' => 'auth'], function () {
