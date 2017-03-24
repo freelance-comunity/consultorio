@@ -12,14 +12,15 @@
 */
 
 Route::get('/', function () {
-    return redirect('login');
+	return redirect('login');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    //    Route::get('/link1', function ()    {
-//        // Uses Auth Middleware
-//    });
+ 
+	Route::resource('doctors', 'DoctorController');
 
-    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
-    #adminlte_routes
+	Route::get('doctors/{id}/delete', [
+		'as' => 'doctors.delete',
+		'uses' => 'DoctorController@destroy',
+		]);
 });
