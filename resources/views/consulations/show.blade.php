@@ -1,6 +1,6 @@
-@extends('app')
+@extends('adminlte::layouts.app')
 
-@section('content')
+@section('main-content')
 <div class="container">
 </div>
 @endsection

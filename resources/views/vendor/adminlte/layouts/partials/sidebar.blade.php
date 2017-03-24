@@ -39,7 +39,7 @@
                 <a href="#"><i class='fa fa-hospital-o'></i> <span>Control</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/patients') }}">Pacientes</a></li>
-                    <li><a href="#">Consultas</a></li>
+                    <li><a href="{{ url('/consulation') }}">Consultas</a></li>
                     <li><a href="#">Enfermeras</a></li>
                 </ul>
             </li>
