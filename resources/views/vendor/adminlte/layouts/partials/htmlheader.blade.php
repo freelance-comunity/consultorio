@@ -7,6 +7,8 @@
 
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="{{ asset('/sweetalert/sweetalert.css') }}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,6 +21,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
+    <script src="./{{ mix('/sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
 
     <script>
         //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs

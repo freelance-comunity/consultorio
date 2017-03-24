@@ -179,6 +179,13 @@ return [
 
     Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
 
+        'Illuminate\View\ViewServiceProvider',
+        'Illuminate\Html\HtmlServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
+        'Mitul\Generator\GeneratorServiceProvider',
+
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+
 
 ],
 
@@ -230,6 +237,12 @@ return [
     'View' => Illuminate\Support\Facades\View::class,
 
     'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+
+    'Form'  => 'Illuminate\Html\FormFacade',
+    'HTML'  => 'Illuminate\Html\HtmlFacade',
+    'Flash' => 'Laracasts\Flash\Flash',
+
+    'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 
