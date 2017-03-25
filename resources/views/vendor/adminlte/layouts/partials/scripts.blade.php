@@ -34,7 +34,7 @@
         },
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'excel', 'pdf', 'print'
         ]
     });
     });

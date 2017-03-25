@@ -1,28 +1,36 @@
 @extends('adminlte::layouts.app')
 
+@section('title')
+Pacientes
+@endsection
+
 @section('main-content')
+
+@section('contentheader_title')
+Todos los pacientes
+@endsection
 
 <div class="container">
 
-    @include('flash::message')
+    @include('sweet::alert')
 
     <div class="row">
-        <h1 class="pull-left">Patients</h1>
-        <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('patients.create') !!}">Add New</a>
+        <h1 class="pull-left">Pacientes</h1>
+        <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('patients.create') !!}">Agregar Nuevo</a>
     </div>
 
     <div class="row">
         @if($patients->isEmpty())
-        <div class="well text-center">No Patients found.</div>
+        <div class="well text-center">No hay pacientes dados de alta.</div>
         @else
-        <table class="table">
+        <table class="table" id="users">
             <thead>
-                <th>Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Age</th>
-                <th>Address</th>
-                <th width="50px">Action</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Teléfono</th>
+                <th>Edad</th>
+                <th>dirección</th>
+                <th width="50px">Acción</th>
             </thead>
             <tbody>
                
@@ -35,7 +43,7 @@
                     <td>{!! $patients->address !!}</td>
                     <td>
                         <a href="{!! route('patients.edit', [$patients->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
-                        <a href="{!! route('patients.delete', [$patients->id]) !!}" onclick="return confirm('Are you sure wants to delete this Patients?')"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="{!! route('patients.delete', [$patients->id]) !!}" onclick="return confirm('¿Estas seguro de eliminar a este paciente?')"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>
                 </tr>
                 @endforeach

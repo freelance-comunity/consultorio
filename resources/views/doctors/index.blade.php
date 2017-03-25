@@ -1,7 +1,13 @@
 @extends('adminlte::layouts.app')
 
-@section('main-content')
+@section('title')
+Medicos
+@endsection
 
+@section('main-content')
+@section('contentheader_title')
+Todos los medicos
+@endsection
 <div class="container">
 
     @include('sweet::alert')
