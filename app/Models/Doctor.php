@@ -15,18 +15,19 @@ class Doctor extends Model
 	    "name",
 		"last_name",
 		"phone",
-		"cedula",
+		"professional_id",
 		"email",
-		"password"
+		"password",
+		"user_id"
 	];
 
 	public static $rules = [
 	    "name" => "required",
 		"last_name" => "required",
 		"phone" => "required",
-		"cedula" => "required",
-		"email",
-		"password"
+		"professional_id" => "required",
+		"email" => "required",
+		"password" => "required",
 	];
 
 	public function user()
