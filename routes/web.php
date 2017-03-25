@@ -15,8 +15,24 @@ Route::get('/', function () {
 	return redirect('login');
 });
 
+Route::get('roles', function(){
+	$admin = new App\Role();
+	$admin->name         = 'admin';
+	$admin->display_name = 'User Administrator'; // optional
+	$admin->description  = 'User is allowed to manage and edit other users'; // optional
+	$admin->save();
+
+	$nurse = new App\Role();
+	$nurse->name         = 'nurse';
+	$nurse->display_name = 'Project nurse'; // optional
+	$nurse->description  = 'User is the nurse of a given project'; // optional
+	$nurse->save();
+
+	echo "Listo";
+});
+
 Route::group(['middleware' => 'auth'], function () {
- 
+
 	Route::resource('doctors', 'DoctorController');
 
 	Route::get('doctors/{id}/delete', [
