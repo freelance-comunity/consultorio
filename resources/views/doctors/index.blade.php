@@ -21,6 +21,7 @@
                 <th>Last Name</th>
                 <th>Phone</th>
                 <th>Cedula</th>
+                <th>Email</th>
                 <th width="50px">Action</th>
             </thead>
             <tbody>
@@ -31,6 +32,7 @@
                     <td>{!! $doctor->last_name !!}</td>
                     <td>{!! $doctor->phone !!}</td>
                     <td>{!! $doctor->cedula !!}</td>
+                    <td>{!! $doctor->email !!}</td>
                     <td>
                         <a href="{!! route('doctors.edit', [$doctor->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
                         <a href="{!! route('doctors.delete', [$doctor->id]) !!}" onclick="return confirm('Are you sure wants to delete this Doctor?')"><i class="glyphicon glyphicon-remove"></i></a>

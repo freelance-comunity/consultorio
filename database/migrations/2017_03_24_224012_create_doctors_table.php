@@ -17,8 +17,10 @@ class CreateDoctorsTable extends Migration
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->string('last_name');
+			$table->string('last_name');			
 			$table->string('phone');
+			$table->string('email')->unique();
+			$table->string('password');
 			$table->string('professional_id');
 			$table->integer('user_id')->unsigned()->foreign('user_id')->references('id')->on('users');
 			$table->timestamps();
