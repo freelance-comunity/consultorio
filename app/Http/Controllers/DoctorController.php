@@ -8,6 +8,10 @@ use Mitul\Controller\AppBaseController;
 use Response;
 use Flash;
 use Schema;
+use Hash;
+use Alert;
+use App\User;
+use App\Role;
 
 class DoctorController extends AppBaseController
 {
@@ -65,29 +69,23 @@ class DoctorController extends AppBaseController
 		/*Create User*/
 		$name = $request->input('name');
 		$email = $request->input('email');
-        // generar un password
-		$random_password = str_random(8);
+       
 		$datos['name'] = $name;
 		$datos['email'] = $email;
-		$datos['password'] = Hash::make($random_password);
-		/*Mail*/
-		$data['name'] = $name;
-		$data['pass'] = $random_password;
-		$data['email'] = $email;
-		/*Crear usuario de alumno*/
+		$datos['password'] = Hash::make($request->input('password'));
+
+		/*Crear usuario de administrator*/
 		$usuario = User::create($datos);
 		$id = $usuario->id;
 		$user = User::find($id);
-		$student = Role::find(1);
-		$user->attachRole($student);
+		$admin = Role::find(1);
+		$user->attachRole($admin);
 		$input['user_id'] = $id;
-		$input['password'] = $random_password;
-		/**/
-        
+		$input['password'] = Hash::make($request->input('password'));
 
 		$doctor = Doctor::create($input);
 
-		Flash::message('Doctor saved successfully.');
+		Alert::success('Medico dado de alta exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('doctors.index'));
 	}
@@ -153,7 +151,7 @@ class DoctorController extends AppBaseController
 		$doctor->fill($request->all());
 		$doctor->save();
 
-		Flash::message('Doctor updated successfully.');
+		Alert::success('Datos editados exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('doctors.index'));
 	}
@@ -178,7 +176,7 @@ class DoctorController extends AppBaseController
 
 		$doctor->delete();
 
-		Flash::message('Doctor deleted successfully.');
+		Alert::success('Doctor Borrado Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('doctors.index'));
 	}

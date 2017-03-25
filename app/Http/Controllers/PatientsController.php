@@ -8,6 +8,7 @@ use Mitul\Controller\AppBaseController;
 use Response;
 use Flash;
 use Schema;
+use Alert;
 
 class PatientsController extends AppBaseController
 {
@@ -65,9 +66,10 @@ class PatientsController extends AppBaseController
 
 		$patients = Patients::create($input);
 
-		Flash::message('Patients saved successfully.');
+		Alert::success('Paciente dado de alta exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('patients.index'));
+		
 	}
 
 	/**
@@ -131,7 +133,7 @@ class PatientsController extends AppBaseController
 		$patients->fill($request->all());
 		$patients->save();
 
-		Flash::message('Patients updated successfully.');
+		Alert::success('Datos editados exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('patients.index'));
 	}
@@ -156,7 +158,8 @@ class PatientsController extends AppBaseController
 
 		$patients->delete();
 
-		Flash::message('Patients deleted successfully.');
+
+		Alert::success('Paciente Borrado Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('patients.index'));
 	}

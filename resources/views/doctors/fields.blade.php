@@ -1,25 +1,25 @@
 <!--- Name Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Last Name Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('last_name', 'Last Name:') !!}
+    {!! Form::label('last_name', 'Apellidos:') !!}
     {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Phone Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('phone', 'Phone:') !!}
+    {!! Form::label('phone', 'Teléfono:') !!}
     {!! Form::text('phone', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Cedula Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('cedula', 'Cedula:') !!}
-    {!! Form::text('cedula', null, ['class' => 'form-control']) !!}
+    {!! Form::label('professional_id', 'Cedula Profesional:') !!}
+    {!! Form::text('professional_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Email Field --->
@@ -30,12 +30,12 @@
 
 <!--- Password Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('password', 'Password:') !!}
-    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+    {!! Form::label('password', 'Contraseña:') !!}
+    <input type="password" name="password" class="form-control">
 </div>
 
 
 <!--- Submit Field --->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Guardar', ['class' => 'uppercase btn btn-primary']) !!}
 </div>
