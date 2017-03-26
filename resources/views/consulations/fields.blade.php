@@ -24,7 +24,7 @@
 
 <!--- Temperature Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('temperature', 'Temperatura:') !!}
+    {!! Form::label('temperature', 'Temperatura corporal:') !!}
     {!! Form::text('temperature', null, ['class' => 'form-control']) !!}
 </div>
 
