@@ -22,7 +22,8 @@ Todos los enfermeros y enfermeras
             @if($nurses->isEmpty())
                 <div class="well text-center">No se encontraron enfermeros.</div>
             @else
-                <table class="table">
+            <div class="table-responsive">
+                <table class="table" id="users">
                     <thead>
                     <th>Name</th>
 			<th>Last Name</th>
@@ -48,6 +49,7 @@ Todos los enfermeros y enfermeras
                     @endforeach
                     </tbody>
                 </table>
+                </div>
             @endif
         </div>
     </div>

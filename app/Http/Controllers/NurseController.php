@@ -79,7 +79,7 @@ class NurseController extends AppBaseController
 		$usuario = User::create($datos);
 		$id = $usuario->id;
 		$user = User::find($id);
-		$nurse = Role::find(2);
+		$nurse = Role::find(1);
 		$user->attachRole($nurse);
 		$input['user_id'] = $id;
 		$input['password'] = Hash::make($request->input('password'));

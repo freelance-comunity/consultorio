@@ -1,29 +1,31 @@
 <!--- Name Field --->
-<div class="form-group col-sm-6 col-lg-4">
+
+<div class="form-group col-sm-10 col-lg-18">
     {!! Form::label('name', 'Nombre:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Last Name Field --->
-<div class="form-group col-sm-6 col-lg-4">
+<div class="form-group col-sm-10 col-lg-18">
     {!! Form::label('last_name', 'Apellidos:') !!}
     {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Phone Field --->
-<div class="form-group col-sm-6 col-lg-4">
+<div class="form-group col-sm-10 col-lg-18">
     {!! Form::label('phone', 'Teléfono:') !!}
     {!! Form::text('phone', null, ['class' => 'form-control']) !!}
 </div>
 
+
 <!--- Email Field --->
-<div class="form-group col-sm-6 col-lg-4">
+<div class="form-group col-sm-10 col-lg-18">
     {!! Form::label('email', 'Email:') !!}
     {!! Form::text('email', null, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Password Field --->
-<div class="form-group col-sm-6 col-lg-4">
+<div class="form-group col-sm-10 col-lg-18">
     {!! Form::label('password', 'Contraseña:') !!}
     <input type="password" name="password" class="form-control">
 </div>

@@ -16,7 +16,8 @@ class Nurse extends Model
 		"last_name",
 		"phone",
 		"email",
-		"password"
+		"password",
+		"user_id"
 	];
 
 	public static $rules = [
@@ -26,5 +27,10 @@ class Nurse extends Model
 		"email" => "required",
 		"password" => "required"
 	];
+
+	public function user()
+	{
+		return $this->belongsTo('App\User');
+	}
 
 }
