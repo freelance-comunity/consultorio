@@ -31,6 +31,7 @@ Todos los pacientes
                 <th>Edad</th>
                 <th>dirección</th>
                 <th width="50px">Acción</th>
+                <th>Consulta</th>
             </thead>
             <tbody>
                
@@ -44,6 +45,9 @@ Todos los pacientes
                     <td>
                         <a href="{!! route('patients.edit', [$patients->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
                         <a href="{!! route('patients.delete', [$patients->id]) !!}" onclick="return confirm('¿Estas seguro de eliminar a este paciente?')"><i class="glyphicon glyphicon-remove"></i></a>
+                    </td>
+                    <td>
+                        <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>
                     </td>
                 </tr>
                 @endforeach

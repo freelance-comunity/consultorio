@@ -9,6 +9,7 @@ use Response;
 use Flash;
 use Schema;
 use Alert;
+use Auth;
 
 class PatientsController extends AppBaseController
 {
@@ -161,5 +162,15 @@ class PatientsController extends AppBaseController
 		Flash::message('Patients deleted successfully.');
 
 		return redirect(route('patients.index'));
+	}
+
+	public function consulations($id)
+	{	
+		$doctor = Auth::user();
+		$patients = Patients::find($id);
+		return view('consulations.create')
+		->with('patients', $patients)
+		->with('doctor', $doctor);
+		
 	}
 }

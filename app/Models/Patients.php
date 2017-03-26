@@ -27,4 +27,9 @@ class Patients extends Model
 		"address" => "required"
 	];
 
+	public function getFullName()
+	{
+		return $this->name.' '.$this->last_name;
+	}
+
 }

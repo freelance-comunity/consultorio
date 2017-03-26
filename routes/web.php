@@ -47,6 +47,11 @@ Route::group(['middleware' => 'auth'], function () {
 		'uses' => 'PatientsController@destroy',
 		]);
 
+	Route::get('generate/{id}/', [
+		'as' => 'patients.generate',
+		'uses' => 'PatientsController@consulations',
+		]);
+
 	Route::resource('consulations', 'ConsulationController');
 
 	Route::get('consulations/{id}/delete', [
