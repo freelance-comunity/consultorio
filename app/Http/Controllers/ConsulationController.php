@@ -8,6 +8,7 @@ use Mitul\Controller\AppBaseController;
 use Response;
 use Flash;
 use Schema;
+use Alert;
 
 class ConsulationController extends AppBaseController
 {
@@ -63,12 +64,11 @@ class ConsulationController extends AppBaseController
 	{
         $input = $request->all();
 
-		/*$consulation = Consulation::create($input);
+		$consulation = Consulation::create($input);
 
 		Alert::success('Consulta Generada Exitosamente!')->persistent("Cerrar");
 
-		return redirect(route('consulations.index'));*/
-		dd($input);
+		return redirect(route('consulations.index'));
 	}
 
 	/**
