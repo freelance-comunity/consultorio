@@ -151,7 +151,7 @@ class DoctorController extends AppBaseController
 		$doctor->fill($request->all());
 		$doctor->save();
 
-		Flash::message('Doctor updated successfully.');
+		Alert::success('Datos editados exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('doctors.index'));
 	}
@@ -176,7 +176,7 @@ class DoctorController extends AppBaseController
 
 		$doctor->delete();
 
-		Flash::message('Doctor deleted successfully.');
+		Alert::success('Doctor Borrado Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('doctors.index'));
 	}

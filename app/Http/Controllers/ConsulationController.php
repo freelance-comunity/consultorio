@@ -65,7 +65,7 @@ class ConsulationController extends AppBaseController
 
 		$consulation = Consulation::create($input);
 
-		Flash::message('Consulation saved successfully.');
+		Alert::success('Consulta Generada Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('consulations.index'));
 	}
@@ -131,7 +131,7 @@ class ConsulationController extends AppBaseController
 		$consulation->fill($request->all());
 		$consulation->save();
 
-		Flash::message('Consulation updated successfully.');
+		Alert::success('Datos editados exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('consulations.index'));
 	}
@@ -156,7 +156,7 @@ class ConsulationController extends AppBaseController
 
 		$consulation->delete();
 
-		Flash::message('Consulation deleted successfully.');
+		Alert::success('Consulta Borrada Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('consulations.index'));
 	}

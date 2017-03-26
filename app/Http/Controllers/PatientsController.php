@@ -11,6 +11,7 @@ use Schema;
 use Alert;
 use Auth;
 
+
 class PatientsController extends AppBaseController
 {
 
@@ -134,7 +135,7 @@ class PatientsController extends AppBaseController
 		$patients->fill($request->all());
 		$patients->save();
 
-		Flash::message('Patients updated successfully.');
+		Alert::success('Datos editados exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('patients.index'));
 	}
@@ -159,7 +160,8 @@ class PatientsController extends AppBaseController
 
 		$patients->delete();
 
-		Flash::message('Patients deleted successfully.');
+
+		Alert::success('Paciente Borrado Exitosamente!')->persistent("Cerrar");
 
 		return redirect(route('patients.index'));
 	}

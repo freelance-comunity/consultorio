@@ -1,19 +1,24 @@
 @extends('adminlte::layouts.app')
+@section('title')
+Consultas
+@endsection
 
 @section('main-content')
-
+@section('contentheader_title')
+Todas las consultas
+@endsection
     <div class="container">
 
         @include('flash::message')
 
         <div class="row">
-            <h1 class="pull-left">Consulations</h1>
-            <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('consulations.create') !!}">Add New</a>
+            <h1 class="pull-left">Consultas</h1>
+            <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('consulations.create') !!}">Agregar Nuevo</a>
         </div>
 
         <div class="row">
             @if($consulations->isEmpty())
-                <div class="well text-center">No Consulations found.</div>
+                <div class="well text-center">No se encontraron consultas.</div>
             @else
                 <table class="table">
                     <thead>
@@ -23,7 +28,7 @@
 			<th>Weight</th>
 			<th>Temperature</th>
 			<th>Treatment</th>
-                    <th width="50px">Action</th>
+                    <th width="50px">Acción</th>
                     </thead>
                     <tbody>
                      
