@@ -1,6 +1,11 @@
 @extends('adminlte::layouts.app')
-
+@section('title')
+Crear consulta
+@endsection
 @section('main-content')
+@section('contentheader_title')
+Crear consulta
+@endsection
 <div class="container">
 
     @include('common.errors')

@@ -1,19 +1,26 @@
 @extends('adminlte::layouts.app')
 
+@section('title')
+Enfermeros(a)
+@endsection
+
 @section('main-content')
+@section('contentheader_title')
+Todos los enfermeros y enfermeras
+@endsection
 
     <div class="container">
 
         @include('flash::message')
 
         <div class="row">
-            <h1 class="pull-left">Nurses</h1>
-            <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('nurses.create') !!}">Add New</a>
+            <h1 class="pull-left">Enfermeros(a) dados de alta</h1>
+            <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('nurses.create') !!}">Agregar Nuevo</a>
         </div>
 
         <div class="row">
             @if($nurses->isEmpty())
-                <div class="well text-center">No Nurses found.</div>
+                <div class="well text-center">No se encontraron enfermeros.</div>
             @else
                 <table class="table">
                     <thead>
@@ -22,7 +29,7 @@
 			<th>Phone</th>
 			<th>Email</th>
 			<th>Password</th>
-                    <th width="50px">Action</th>
+                    <th width="50px">Accción</th>
                     </thead>
                     <tbody>
                      
