@@ -8,17 +8,22 @@
 <!--- Name Doctor Field --->
 <div class="form-group col-sm-6 col-lg-4">
 
+
     {!! Form::label('name_doctor', 'Nombre del Medico:') !!}
     {!! Form::text('name_doctor', $doctor->name, ['class' => 'form-control']) !!}
 
     {!! Form::label('name_doctor', 'Nombre del Doctor:') !!}
     {!! Form::text('name_doctor', null, ['class' => 'form-control']) !!}
+
+    {!! Form::label('name_doctor', 'Nombre del Medico:') !!}
+    {!! Form::text('name_doctor', $doctor->name, ['class' => 'form-control']) !!}
+
 </div>
 
 <!--- Date Field --->
 <div class="form-group col-sm-6 col-lg-4">
     {!! Form::label('date', 'Fecha:') !!}
-    {!! Form::text('date', null, ['class' => 'form-control']) !!}
+    <input type="date" class="form-control datepicker" name="date">
 </div>
 
 <!--- Weight Field --->
@@ -29,8 +34,12 @@
 
 <!--- Temperature Field --->
 <div class="form-group col-sm-6 col-lg-4">
+<<<<<<< HEAD
 
     {!! Form::label('temperature', 'Temperatura corporal:') !!}
+
+    {!! Form::label('temperature', 'Temperatura:') !!}
+
 
     {!! Form::label('temperature', 'Temperatura:') !!}
 
@@ -47,14 +56,24 @@
     {!! Form::label('treatment', 'Tratamiento:') !!}
     {!! Form::text('treatment', null, ['class' => 'form-control']) !!}
 
+
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('treatment', 'Tratamiento:') !!}
+    {!! Form::textarea('treatment', null, ['class' => 'form-control ckeditor']) !!}
+
 </div>
 
 
 <!--- Submit Field --->
 <div class="form-group col-sm-12">
 
+
     {!! Form::submit('Generar', ['class' => 'uppercase btn btn-primary']) !!}
 
     {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
 
+
+    {!! Form::submit('Generar', ['class' => 'uppercase btn btn-primary']) !!}
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+>>>>>>> remotes/origin/master
 </div>

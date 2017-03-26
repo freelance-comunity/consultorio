@@ -33,3 +33,5 @@
 <div class="form-group col-sm-12">
     {!! Form::submit('Guardar', ['class' => 'uppercase btn btn-primary']) !!}
 </div>
+
+
