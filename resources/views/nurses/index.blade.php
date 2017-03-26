@@ -29,7 +29,7 @@ Todos los enfermeros y enfermeras
 			<th>Last Name</th>
 			<th>Phone</th>
 			<th>Email</th>
-			<th>Password</th>
+			
                     <th width="50px">Accción</th>
                     </thead>
                     <tbody>
@@ -40,7 +40,7 @@ Todos los enfermeros y enfermeras
 					<td>{!! $nurse->last_name !!}</td>
 					<td>{!! $nurse->phone !!}</td>
 					<td>{!! $nurse->email !!}</td>
-					<td>{!! $nurse->password !!}</td>
+					
                             <td>
                                 <a href="{!! route('nurses.edit', [$nurse->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
                                 <a href="{!! route('nurses.delete', [$nurse->id]) !!}" onclick="return confirm('Are you sure wants to delete this Nurse?')"><i class="glyphicon glyphicon-remove"></i></a>
