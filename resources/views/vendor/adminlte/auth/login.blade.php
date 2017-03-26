@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+                <a href="{{ url('/home') }}"><!--<b>Consult</b>APP-->                    <img src="{{ asset('img/stethoscope-medical-tool.png') }}" alt="User Image" /></a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -44,7 +44,7 @@
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div><!-- /.col -->
             </div>
         </form>
