@@ -10,6 +10,7 @@ use Flash;
 use Schema;
 use Alert;
 
+
 class PatientsController extends AppBaseController
 {
 

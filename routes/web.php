@@ -54,5 +54,12 @@ Route::group(['middleware' => 'auth'], function () {
 		'uses' => 'ConsulationController@destroy',
 		]);
 
+	Route::resource('nurses', 'NurseController');
+
+	Route::get('nurses/{id}/delete', [
+		'as' => 'nurses.delete',
+		'uses' => 'NurseController@destroy',
+		]);
+
 	
 });
