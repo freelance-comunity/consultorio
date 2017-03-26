@@ -17,7 +17,9 @@ class Consulation extends Model
 		"date",
 		"weight",
 		"temperature",
-		"treatment"
+		"treatment",
+		"patients_id",
+		"doctors_id"
 	];
 
 	public static $rules = [
@@ -25,7 +27,7 @@ class Consulation extends Model
 		"name_doctor" => "required",
 		"date" => "required",
 		"weight" => "required",
-		"temperature" => "allergies:string",
+		"temperature" => "required",
 		"treatment" => "required"
 	];
 

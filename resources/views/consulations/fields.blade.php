@@ -32,11 +32,12 @@
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('treatment', 'Tratamiento:') !!}
     {!! Form::textarea('treatment', null, ['class' => 'form-control ckeditor']) !!}
+    <input type="hidden" value="{{ $patients->id }}" name="patients_id">
+    <input type="hidden" value="{{ $doctor->id }}" name="doctors_id">
 </div>
 
 
 <!--- Submit Field --->
 <div class="form-group col-sm-12">
     {!! Form::submit('Generar', ['class' => 'uppercase btn btn-primary']) !!}
-    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
 </div>
