@@ -23,6 +23,13 @@ class NurseController extends AppBaseController
 	 *
 	 * @return Response
 	 */
+
+	public function __construct()
+	 {
+	 	//$this->middleware("is_admin");
+	 	$this->middleware('is_admin', ['except' => ['index']]);
+	 }
+	 
 	public function index(Request $request)
 	{
 		$query = Nurse::query();
