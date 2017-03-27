@@ -18,5 +18,4 @@ Crear paciente
 
     {!! Form::close() !!}
 </div>
-</div>
 @endsection

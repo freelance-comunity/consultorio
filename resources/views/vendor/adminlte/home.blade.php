@@ -39,6 +39,7 @@ Inicio
 				<!-- /.box -->
 
 			</div>
+			<img src="{{ asset('img/medical.jpg') }}" class="img-responsive" width="100%" alt="consultAPP">
 		</div>
 	</div>
 @endsection
