@@ -31,6 +31,12 @@ Route::get('roles', function(){
 	echo "Listo";
 });
 
+Route::group(['prefix' => 'admin','middleware' => ['auth', 'is_admin'	]], function(){
+	//Route::get('/', 'InternalController@index');
+	//Route::get('/prueba', 'InternalController@prueba');
+	
+});
+
 Route::group(['middleware' => 'auth'], function () {
 
 	Route::resource('doctors', 'DoctorController');

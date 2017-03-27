@@ -16,6 +16,7 @@ use App\Role;
 class DoctorController extends AppBaseController
 {
 
+
 	/**
 	 * Display a listing of the Post.
 	 *
@@ -23,6 +24,7 @@ class DoctorController extends AppBaseController
 	 *
 	 * @return Response
 	 */
+	 
 	public function index(Request $request)
 	{
 		$query = Doctor::query();
