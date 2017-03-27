@@ -23,7 +23,9 @@
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>Inicio</span></a></li>
+            @role('admin')
             <li><a href="{{ url('doctors') }}"><i class='fa fa-stethoscope'></i> <span>Medicos</span></a></li>
+            @endrole
             <li class="treeview">
                 <a href="#"><i class='fa fa-hospital-o'></i> <span>Control</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

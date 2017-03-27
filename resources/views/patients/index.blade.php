@@ -16,7 +16,9 @@ Todos los pacientes
 
     <div class="row">
         <h1 class="pull-left">Pacientes</h1>
+        @role('admin')
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('patients.create') !!}">Agregar Nuevo</a>
+        @endrole
     </div>
 
     <div class="row">
@@ -30,8 +32,10 @@ Todos los pacientes
                 <th>Teléfono</th>
                 <th>Edad</th>
                 <th>dirección</th>
+                 @role('admin')
                 <th width="50px">Acción</th>
                 <th>Consulta</th>
+                @endrole
             </thead>
             <tbody>
                
@@ -42,6 +46,7 @@ Todos los pacientes
                     <td>{!! $patients->phone !!}</td>
                     <td>{!! $patients->age !!}</td>
                     <td>{!! $patients->address !!}</td>
+                     @role('admin')
                     <td>
                         <a href="{!! route('patients.edit', [$patients->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
                         <a href="{!! route('patients.delete', [$patients->id]) !!}" onclick="return confirm('¿Estas seguro de eliminar a este paciente?')"><i class="glyphicon glyphicon-remove"></i></a>
@@ -49,6 +54,7 @@ Todos los pacientes
                     <td>
                         <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>
                     </td>
+                    @endrole
                 </tr>
                 @endforeach
             </tbody>
