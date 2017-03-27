@@ -23,7 +23,7 @@ Todas las consultas
                 <th>Peso en kg</th>
                 <th>Temperatura</th>
                 <th>Tratamiento</th>
-                <th width="50px">Acción</th>
+                <!--<th width="50px">Acción</th>-->
             </thead>
             <tbody>
 
@@ -35,9 +35,9 @@ Todas las consultas
                     <td>{!! $consulation->weight !!}</td>
                     <td>{!! $consulation->temperature !!}</td>
                     <td>{!! $consulation->treatment !!}</td>
-                    <td>
+                   <!-- <td>
                         <a href="#" class="uppercase btn btn-block btn-default">imprimir</a>
-                    </td>
+                    </td>-->
                 </tr>
                 @endforeach
             </tbody>
