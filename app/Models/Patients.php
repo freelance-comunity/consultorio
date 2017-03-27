@@ -34,7 +34,7 @@ class Patients extends Model
 
 	public function consulations()
 	{
-		return $this->hasMany('App')
+		return $this->hasMany('App\Models\Consulation');
 	}
 
 }

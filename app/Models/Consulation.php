@@ -31,4 +31,14 @@ class Consulation extends Model
 		"treatment" => "required"
 	];
 
+	public function patients()
+	{
+		return $this->belongsTo('App\Models\Patients');
+	}
+
+	public function doctor()
+	{
+		return $this->belongsTo('App\Models\Doctor');
+	}
+
 }

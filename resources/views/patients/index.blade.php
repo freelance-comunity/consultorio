@@ -53,6 +53,7 @@ Todos los pacientes
                     </td>
                     <td>
                         <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>
+                        <a href="{{ url('/viewconsulations') }}/{{ $patients->id }}" class=" uppercase btn-block btn btn-success">Ver consultas</a>
                     </td>
                     @endrole
                 </tr>

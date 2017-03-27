@@ -66,5 +66,17 @@ Route::group(['middleware' => 'auth'], function () {
 		'uses' => 'NurseController@destroy',
 		]);
 
+	Route::get('viewconsulations/{id}', function($id){
+		$patients = App\Models\Patients::find($id);
+		$consulations = $patients->consulations;
+		
+		return view('patients.viewconsulations')
+		->with('consulations',$consulations);
+	});
+
+	Route::get('print', function(){
+		return view('consulations.print');
+	});
+
 	
 });
