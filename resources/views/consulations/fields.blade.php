@@ -7,7 +7,7 @@
 <!--- Name Doctor Field --->
 <div class="form-group col-sm-6 col-lg-4">
     {!! Form::label('name_doctor', 'Nombre del Medico:') !!}
-    {!! Form::text('name_doctor', $doctor->name, ['class' => 'form-control']) !!}
+    {!! Form::text('name_doctor', $fullname, ['class' => 'form-control']) !!}
 </div>
 
 <!--- Date Field --->

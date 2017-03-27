@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
 @section('htmlheader')
-    @include('adminlte::layouts.partials.htmlheader')
+    @include('layouts.partials.htmlheader')
 @show
 
 <!--
@@ -21,6 +21,7 @@ desired effect
 |               | skin-yellow                             |
 |               | skin-red                                |
 |               | skin-green                              |
+|               | skin-cobach                             |
 |---------------------------------------------------------|
 |LAYOUT OPTIONS | fixed                                   |
 |               | layout-boxed                            |
@@ -29,21 +30,17 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
+<body class="skin-blue  sidebar-mini">
+<div class="wrapper">
 
-<body class="skin-blue sidebar-mini">
-<body class="skin-purple sidebar-mini">
+    @include('layouts.partials.mainheader')
 
-<div id="app">
-    <div class="wrapper">
-
-    @include('adminlte::layouts.partials.mainheader')
-
-    @include('adminlte::layouts.partials.sidebar')
+    @include('layouts.partials.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        @include('adminlte::layouts.partials.contentheader')
+        @include('layouts.partials.contentheader')
 
         <!-- Main content -->
         <section class="content">
@@ -52,14 +49,14 @@ desired effect
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
-    
+    @include('layouts.partials.controlsidebar')
 
-    @include('adminlte::layouts.partials.footer')
+    @include('layouts.partials.footer')
 
 </div><!-- ./wrapper -->
-</div>
+
 @section('scripts')
-    @include('adminlte::layouts.partials.scripts')
+    @include('layouts.partials.scripts')
 @show
 
 </body>

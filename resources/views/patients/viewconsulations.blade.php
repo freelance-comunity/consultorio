@@ -11,11 +11,6 @@ Todas las consultas
 
     @include('sweet::alert')
 
-   <!-- <div class="row">
-        <h1 class="pull-left">Consultas</h1>
-        <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('consulations.create') !!}">Agregar Nuevo</a>
-    </div>-->
-
     <div class="row">
         @if($consulations->isEmpty())
         <div class="well text-center">No se encontraron consultas.</div>
@@ -28,7 +23,7 @@ Todas las consultas
                 <th>Peso en kg</th>
                 <th>Temperatura</th>
                 <th>Tratamiento</th>
-                <th width="50px">Acción</th>
+                <!--<th width="50px">Acción</th>-->
             </thead>
             <tbody>
 
@@ -40,10 +35,9 @@ Todas las consultas
                     <td>{!! $consulation->weight !!}</td>
                     <td>{!! $consulation->temperature !!}</td>
                     <td>{!! $consulation->treatment !!}</td>
-                    <td>
-                        <a href="{!! route('consulations.edit', [$consulation->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
-                        <a href="{!! route('consulations.delete', [$consulation->id]) !!}" onclick="return confirm('Are you sure wants to delete this Consulation?')"><i class="glyphicon glyphicon-remove"></i></a>
-                    </td>
+                   <!-- <td>
+                        <a href="#" class="uppercase btn btn-block btn-default">imprimir</a>
+                    </td>-->
                 </tr>
                 @endforeach
             </tbody>

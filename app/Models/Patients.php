@@ -32,4 +32,9 @@ class Patients extends Model
 		return $this->name.' '.$this->last_name;
 	}
 
+	public function consulations()
+	{
+		return $this->hasMany('App\Models\Consulation');
+	}
+
 }

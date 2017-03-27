@@ -30,9 +30,19 @@ class Doctor extends Model
 		"password" => "required",
 	];
 
+	public function getFullNameAttribute()
+    {
+        return preg_replace('/\s+/', ' ',$this->name.' '.$this->last_name);
+    }
+
 	public function user()
 	{
 		return $this->belongsTo('App\User');
+	}
+
+	public function consulations()
+	{
+		return $this->hasMany('App\Models\Consulation');
 	}
 
 }

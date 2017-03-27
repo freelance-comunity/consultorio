@@ -168,10 +168,13 @@ class PatientsController extends AppBaseController
 
 	public function consulations($id)
 	{	
-		$doctor = Auth::user();
+		$user = Auth::user();
+		$doctor = $user->doctor;
+		$fullname = $doctor->full_name;
 		$patients = Patients::find($id);
 		return view('consulations.create')
 		->with('patients', $patients)
+		->with('fullname', $fullname)
 		->with('doctor', $doctor);
 		
 	}
