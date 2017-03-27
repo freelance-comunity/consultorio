@@ -22,11 +22,11 @@ class Doctor extends Model
 	];
 
 	public static $rules = [
-	    "name" => "required",
-		"last_name" => "required",
-		"phone" => "required",
+	    "name" => "required|alpha",
+		"last_name" => "required|alpha",
+		"phone" => "required|digits:10",
 		"professional_id" => "required",
-		"email" => "required",
+		"email" => "required|email",
 		"password" => "required",
 	];
 

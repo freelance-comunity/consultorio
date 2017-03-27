@@ -21,10 +21,10 @@ class Nurse extends Model
 	];
 
 	public static $rules = [
-	    "name" => "required",
-		"last_name" => "required",
-		"phone" => "required",
-		"email" => "required",
+	    "name" => "required|alpha",
+		"last_name" => "required|alpha",
+		"phone" => "required|digits:10",
+		"email" => "required|email",
 		"password" => "required"
 	];
 

@@ -20,10 +20,10 @@ class Patients extends Model
 	];
 
 	public static $rules = [
-	    "name" => "required",
-		"last_name" => "required",
-		"phone" => "required",
-		"age" => "required",
+	    "name" => "required|alpha",
+		"last_name" => "required|alpha",
+		"phone" => "required|digits:10",
+		"age" => "required|numeric",
 		"address" => "required"
 	];
 

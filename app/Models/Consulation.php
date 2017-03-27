@@ -26,8 +26,8 @@ class Consulation extends Model
 	    "name_patients" => "required",
 		"name_doctor" => "required",
 		"date" => "required",
-		"weight" => "required",
-		"temperature" => "required",
+		"weight" => "required|numeric",
+		"temperature" => "required|numeric",
 		"treatment" => "required"
 	];
 

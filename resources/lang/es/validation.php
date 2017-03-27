@@ -100,8 +100,55 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'El campo nombre  es obligatorio',
+            'alpha'    => 'El campo nombre sólo puede contener letras'
+        ],
+
+        'last_name' => [
+            'required' => 'El campo apellidos  es obligatorio',
+            'alpha'    => 'El campo apellidos sólo puede contener letras'
+        ],
+
+        'phone' => [
+            'required' => 'El campo teléfono  es obligatorio',
+            'digits'   => 'El campo teléfono debe ser un número de 10 dígitos'
+        ],
+
+        'professional_id' => [
+            'required' => 'El campo cedula profesional es obligatorio',
+        ],
+
+        'password' => [
+            'required' => 'El campo contraseña   es obligatorio',
+        ],
+
+        'age'      => [
+            'required' => 'El campo edad   es obligatorio',
+            'numeric'  => 'El campo edad debe ser un numero',
+        ],
+
+        'address'      => [
+            'required' => 'El campo dirección   es obligatorio',
+
+        ],
+
+        'date'  => [
+            'required' => 'El campo fecha   es obligatorio',
+        ],
+
+        'weight' => [
+            'required' => 'El campo peso es obligatorio',
+            'numeric'  => 'El campo peso debe ser un numero'
+        ],
+
+        'temperature' => [
+            'required' => 'El campo temperatura es obligatorio',
+            'numeric'  => 'El campo temperatura debe ser un numero'
+        ],
+
+        'treatment' => [
+            'required' => 'El campo tratamiento es obligatorio',
         ],
     ],
 
