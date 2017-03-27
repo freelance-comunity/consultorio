@@ -51,12 +51,13 @@ Todos los pacientes
                         <td>
                             <a href="{!! route('patients.edit', [$patients->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
                             <a href="{!! route('patients.delete', [$patients->id]) !!}" onclick="return confirm('¿Estas seguro de eliminar a este paciente?')"><i class="glyphicon glyphicon-remove"></i></a>
-                        </td>
+                        </td> 
+                        @endrole
                         <td>
                             <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>
-                            <a href="{{ url('/viewconsulations') }}/{{ $patients->id }}" class=" uppercase btn-block btn btn-success">Ver consultas</a>
+                           @role('admin') <a href="{{ url('/viewconsulations') }}/{{ $patients->id }}" class=" uppercase btn-block btn btn-success">Ver consultas</a> @endrole('admin')
                         </td>
-                        @endrole
+                       
                     </tr>
                     @endforeach
                 </tbody>
