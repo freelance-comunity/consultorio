@@ -17,7 +17,12 @@ Inicio
 				<!-- Default box -->
 				<div class="box">
 					<div class="box-header with-border">
-						<h3 class="box-title">Home</h3>
+						@role('admin')
+						<h3 class="box-title">Bienvenido Doctor</h3>
+						@endrole
+						@role('nurse')
+						<h3 class="box-title">Bienvenido</h3>
+						@endrole
 
 						<div class="box-tools pull-right">
 							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">

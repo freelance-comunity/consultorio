@@ -11,10 +11,10 @@ Todas las consultas
 
     @include('sweet::alert')
 
-    <div class="row">
+   <!-- <div class="row">
         <h1 class="pull-left">Consultas</h1>
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('consulations.create') !!}">Agregar Nuevo</a>
-    </div>
+    </div>-->
 
     <div class="row">
         @if($consulations->isEmpty())
