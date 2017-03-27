@@ -1,4 +1,4 @@
-@extends('adminlte::layouts.app')
+@extends('layouts.app')
 @section('title')
 Inicio
 @endsection
