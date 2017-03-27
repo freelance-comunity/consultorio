@@ -14,7 +14,9 @@ Todos los medicos
 
     <div class="row">
         <h1 class="pull-left">Medicos dados de Alta</h1>
+        @role('admin')
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('doctors.create') !!}">Agregar Nuevo</a>
+        @endrole
     </div>
 
     <div class="row">
