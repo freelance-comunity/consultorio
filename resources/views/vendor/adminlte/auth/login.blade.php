@@ -1,6 +1,6 @@
 @extends('adminlte::layouts.auth')
 
-@section('htmlheader_title')
+@section('title')
     Log in
 @endsection
 

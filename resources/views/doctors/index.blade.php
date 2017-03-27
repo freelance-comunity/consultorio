@@ -21,7 +21,7 @@ Todos los medicos
         @if($doctors->isEmpty())
         <div class="well text-center">No hay ningun registro hasta el momento.</div>
         @else
-        <div class="table-respinsive">
+        <div class="table-responsive">
             <table class="table" id="users">
                 <thead>
                     <th>Nombre</th>

@@ -29,6 +29,7 @@
 <script>
     $(document).ready(function(){
     $('#users').DataTable({
+        responsive: true,
         "language":{
             "url":"//cdn.datatables.net/plug-ins/1.10.13/i18n/Spanish.json"
         },
