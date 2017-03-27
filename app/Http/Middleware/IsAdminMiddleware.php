@@ -18,7 +18,7 @@ class IsAdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (\Auth::user()->role == 'admin') {
+        if (\Auth::user()->hasRole(['admin'])) {
         return $next($request);
         }else
         {

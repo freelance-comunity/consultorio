@@ -84,5 +84,11 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('consulations.print');
 	});
 
+	Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
+		Route::get('/soyadmin', function(){
+			return "hola admin";
+		});
+	});
+
 	
 });

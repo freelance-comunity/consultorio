@@ -24,7 +24,10 @@ class DoctorController extends AppBaseController
 	 *
 	 * @return Response
 	 */
-	 
+	 /*public function __construct()
+	 {
+	 	$this->middleware("is_admin");
+	 }*/
 	public function index(Request $request)
 	{
 		$query = Doctor::query();
@@ -69,7 +72,7 @@ class DoctorController extends AppBaseController
 	{	
 		$input = $request->all();
 		/*Create User*/
-		/*$name = $request->input('name');
+		$name = $request->input('name');
 		$email = $request->input('email');
        
 		$datos['name'] = $name;
@@ -77,7 +80,7 @@ class DoctorController extends AppBaseController
 		$datos['password'] = Hash::make($request->input('password'));
 
 		/*Crear usuario de administrator*/
-		/*$usuario = User::create($datos);
+		$usuario = User::create($datos);
 		$id = $usuario->id;
 		$user = User::find($id);
 		$admin = Role::find(1);
@@ -89,8 +92,7 @@ class DoctorController extends AppBaseController
 
 		Alert::success('Medico dado de alta exitosamente!')->persistent("Cerrar");
 
-		return redirect(route('doctors.index'));*/
-		dd($input);
+		return redirect(route('doctors.index'));
 	}
 
 	/**
