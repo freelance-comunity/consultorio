@@ -33,10 +33,12 @@ Todos los pacientes
                     <th>Teléfono</th>
                     <th>Edad</th>
                     <th>dirección</th>
-                    @role('admin')
+                    
                     <th width="50px">Acción</th>
+                   @role('admin')
                     <th>Consulta</th>
                     @endrole
+                    
                 </thead>
                 <tbody>
                  
@@ -54,8 +56,8 @@ Todos los pacientes
                         </td> 
                         @endrole
                         <td>
-                            <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>
-                           @role('admin') <a href="{{ url('/viewconsulations') }}/{{ $patients->id }}" class=" uppercase btn-block btn btn-success">Ver consultas</a> @endrole('admin')
+                            @role('admin') <a href="{!! route('patients.generate', [$patients->id]) !!}" class="uppercase btn-block btn btn-primary">Agregar consulta</a>@endrole('admin')
+                           <a href="{{ url('/viewconsulations') }}/{{ $patients->id }}" class=" uppercase btn-block btn btn-success">Ver consultas</a> 
                         </td>
                        
                     </tr>
